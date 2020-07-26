@@ -27,6 +27,7 @@ curses.init_pair(2, curses.COLOR_YELLOW, curses.COLOR_BLUE)
 curses.init_pair(3, curses.COLOR_BLUE, curses.COLOR_YELLOW)
 curses.init_pair(4, curses.COLOR_RED, curses.COLOR_BLACK)
 curses.init_pair(5, curses.COLOR_BLACK, curses.COLOR_BLACK)
+curses.init_pair(6, curses.COLOR_CYAN, curses.COLOR_BLACK)
 
 
 MUTATION_RATE = 0.0005
@@ -125,7 +126,7 @@ def titleScreen():
     # Display text
 
     stdscr.addstr(start_y, start_x_title, title,
-                  curses.color_pair(2) + curses.A_BOLD)
+                  curses.color_pair(4) + curses.A_BOLD)
     stdscr.addstr(start_y + 1, start_x_subtitle,
                   subtitle, curses.color_pair(6))
     stdscr.addstr(start_y + 3, (width // 2) - 9, '=' * 18, + curses.A_BOLD)
